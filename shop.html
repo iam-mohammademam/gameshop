@@ -1,0 +1,1863 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Bootstrap CDN -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<!-- SWIPER JS CDN -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+	<!-- FONTAWESOME CDN -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<!-- Link CSS -->
+	<link rel="stylesheet" href="css/style.css">
+
+
+
+
+
+	<title>GameShop</title>
+</head>
+
+<body>
+	<!-- PRELOADER -->
+	<!-- <div class="preloader position-absolute position-fixed top-0 start-0 justify-center">
+		<img src="assets/loading.gif" class="w-25 img-fluid">
+	</div> -->
+	<!-- NAVBAR -->
+	<div class="px-5 w-100 bg-dark sticky-top ">
+		<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+			<a class="navbar-brand" href="#">Game<span>Shop</span></a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="mynavbar">
+				<ul class="navbar-nav me-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="index.html">Homepage</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							Categories
+						</a>
+						<ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+							<li class="py-1 ps-3"><a class="text-light text-decoration-none" href="shop.html">All</a></li>
+							<li class="py-1 ps-3"><a class="text-light text-decoration-none" href="shop.html">Mouse</a></li>
+							<li class="py-1 ps-3"><a class="text-light text-decoration-none" href="shop.html">Gamepad</a></li>
+							<li class="py-1 ps-3"><a class="text-light text-decoration-none" href="shop.html">Keyboard</a></li>
+							<li class="py-1 ps-3"><a class="text-light text-decoration-none" href="shop.html">Headphone</a></li>
+							<li class="py-1 ps-3"><a class="text-light text-decoration-none" href="shop.html">Graphics Card</a></li>
+						</ul>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link active" href="shop.html">Shop</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="blog.html">Blogs</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="contact.html">Contact</a>
+					</li>
+				</ul>
+				<div class="d-flex position-relative align-items-center justify-content-around">
+					<div class="search-box bg-dark opacity position-absolute end-110 pe-3  border align-items-center justify-content-between border-white d-flex rounded-pill overflow-hidden">
+						<i class="fa-solid fa-search c-pointer bg-light text-dark p-2 fs-8 rounded-circle"></i>
+						<input type="text" placeholder="Keywords" class="w-100 h-100 py-1 ms-2 text-white bg-transparent">
+					</div>
+					<i class="fa-solid fa-search c-pointer search-btn"></i>
+					<a href="contact.html"><i class="fa-solid fa-user c-pointer px-3"></i></a>
+					<i class="fa-solid fa-cart-shopping cart-icon c-pointer"></i>
+				</div>
+			</div>
+
+		</nav>
+	</div>
+	<!--SHOPPING CART  -->
+	<div class="cart-container bg-dark">
+		<i class="fa-solid fa-times close fs-5 position-absolute top-0 start-0 m-3 text-light"></i>
+		<div class="row px-2 w-100 m-0 mt-5">
+			<div class="col col-5 px-1 text-light ">
+				<p class="title text-center border-bottom border-light w-100 mx-auto text-capitalize">item</p>
+			</div>
+			<div class="col col-3 px-1 text-light ">
+				<p class="title text-center border-bottom border-light w-100 mx-auto text-capitalize">Quantity</p>
+			</div>
+			<div class="col col-3 px-1 text-light ">
+				<p class="title text-center border-bottom border-light w-100 mx-auto text-capitalize">price</p>
+			</div>
+			<div class="col col-1 px-1 text-light ">
+			</div>
+		</div>
+		<div class="row cart cart-1 p-1 w-100 my-1 mx-0 rounded-1">
+			<div class="col col-5 px-1 text-light justify-center flex-column">
+				<img src="assets/keyboard/1.png" class="img-fluid w-75">
+				<small class="text-capitalize cart-category">
+					graphics card
+				</small>
+			</div>
+			<div class="col col-3 px-1 text-light justify-center overflow-hidden">
+				<i class="fa-solid fa-minus decrement fs-12 pe-1 c-pointer"></i>
+				<input type="number" value="1" class="text-center quantity bg-transparent text-light rounded-1 w-30 border" disabled>
+				<i class="fa-solid fa-plus increment fs-12 ps-1 c-pointer"></i>
+			</div>
+			<div class="col col-3 px-1 text-light justify-center">
+				<p class="my-0">$<span class="price">200</span></p>
+			</div>
+			<div class="col col-1 px-1 justify-center">
+				<i class="fa-solid fa-times text-danger remove fs-5 c-pointer"></i>
+			</div>
+		</div>
+	</div>
+	<!-- HEADER -->
+	<section class="blog-header bg-dark w-100 mb-3 py-5 overflow-hidden justify-center flex-column">
+		<h2 class="text-light">Buy 1 Get 1  </h2>
+		<small class="text-light text-capitalize">hot deal</small>
+	</section>
+	<!-- SUGGESTD PRODUCTS -->
+	<section class="shop-main py-3">
+		<div class="w-90 mx-auto px-2">
+			<span class="d-flex pb-3 align-items-center justify-content-between">
+				<h3 class="heading">Shop</h3>
+				<div class="m-0 select position-relative text-center fs-12">
+					<li class="d-flex align-items-center box c-pointer"><span class="main">Categories</span><i class="fa-solid fa-chevron-down ps-1"></i> </li>
+					<ul class="position-absolute lists rounded-1 bg-light top-100 end-0 mt-2 text-end px-0">
+						<li class="" data-filter="all">All</li>
+						<li class="" data-filter="mouse">Mouse</li>
+						<li class="" data-filter="keyboard">Keyboard</li>
+						<li class="" data-filter="gamepad">Gamepad</li>
+						<li class="" data-filter="headphone">Headphone</li>
+						<li class="" data-filter="graphics-card">Graphics Card</li>
+					</ul>
+				</div>
+			</span>
+
+			<div class="row py-3 w-100 mx-auto">
+				<div data-items="gamepad" class="card col d-none col-6 col-sm-4 col-md-3 p-1">
+					<div class="product-card position-relative overflow-hidden py-2 bg-light text-dark rounded-2 position-relative flex-column justify-center swiper-slide">
+						<ul class="action position-absolute">
+							<li class="justify-center add-to-cart position-relative mb-1 rounded-1">
+								<i class="fa-solid fa-shopping-cart  fs-10"></i>
+								<span class="position-absolute fs-12 position-relative zi-1 bg-danger text-light rounded-1 top-50 translate-middle-y">
+									Add To Cart
+									<span class="square"></span>
+								</span>
+							</li>
+							<li class="justify-center show-details position-relative rounded-1">
+								<i class="fa-solid fa-eye fs-10"></i>
+								<span class="position-absolute fs-12 position-relative zi-1 bg-danger text-light rounded-1 top-50 translate-middle-y">
+									See Details
+									<span class="square"></span>
+								</span>
+							</li>
+						</ul>
+						<div class="product-img w-100 h-150 p-2 justify-center overflow-hidden">
+							<img src="assets/gamepad/2.png" class="img-fluid w-60">
+						</div>
+						<div class="product-details w-100 pt-3 px-2">
+							<a href="#" class="text-decoration-none">
+								<p class="category m-0 text-secondary text-capitalize fs-9">
+									gamepad
+								</p>
+							</a>
+							<a href="#" class="text-decoration-none">
+								<h4 class="text-light show-details-link product-name m-0 fs-6 text-uppercase pt-1">
+									Logitech F310 Wired Gamepad Controller Layout 4 Switch
+								</h4>
+							</a>
+							<div class="stars text-danger fs-6 pt-1">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<span class="ratings-point ps-1">4.0</span>
+							</div>
+							<div class="d-flex gap-15 pt-2 align-items-center m-0 p-0">
+								<h4 class="fs-6 d-flex text-danger align-items-center m-0 text-decoration-line-through">$
+									<span class="prev-price">37</span>
+								</h4>
+								<h4 class="fs-6 d-flex align-items-center m-0 ">$
+									<span class="curr-price">31</span>
+								</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div data-items="mouse" class="card col col-6 col-sm-4 col-md-3 p-1">
+					<div class="product-card position-relative overflow-hidden py-2 bg-light text-dark rounded-2 position-relative flex-column justify-center swiper-slide">
+						<ul class="action position-absolute">
+							<li class="justify-center add-to-cart position-relative mb-1 rounded-1">
+								<i class="fa-solid fa-shopping-cart  fs-10"></i>
+								<span class="position-absolute fs-12 position-relative zi-1 bg-danger text-light rounded-1 top-50 translate-middle-y">
+									Add To Cart
+									<span class="square"></span>
+								</span>
+							</li>
+							<li class="justify-center show-details position-relative rounded-1">
+								<i class="fa-solid fa-eye fs-10"></i>
+								<span class="position-absolute fs-12 position-relative zi-1 bg-danger text-light rounded-1 top-50 translate-middle-y">
+									See Details
+									<span class="square"></span>
+								</span>
+							</li>
+						</ul>
+						<div class="product-img w-100 h-150 p-2 justify-center overflow-hidden">
+							<img src="assets/mouse/2.png" class="img-fluid w-60">
+						</div>
+						<div class="product-details w-100 pt-3 px-2">
+							<a href="#" class="text-decoration-none">
+								<p class="category m-0 text-secondary text-capitalize fs-9">
+									Mouse
+								</p>
+							</a>
+							<a href="#" class="text-decoration-none">
+								<h4 class="text-light show-details-link product-name m-0 fs-6 text-uppercase pt-1">
+									Logitech M510 Wireless Mouse with USB Unifying Receiver.</h4>
+								</h4>
+							</a>
+							<div class="stars text-danger fs-6 pt-1">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<span class="ratings-point ps-1">4.0</span>
+							</div>
+							<div class="d-flex gap-15 pt-2 align-items-center m-0 p-0">
+								<h4 class="fs-6 d-flex text-danger align-items-center m-0 text-decoration-line-through">$
+									<span class="prev-price">28</span>
+								</h4>
+								<h4 class="fs-6 d-flex align-items-center m-0 ">$
+									<span class="curr-price">23</span>
+								</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div data-items="keyboard" class="card col col-6 col-sm-4 col-md-3 p-1">
+					<div class="product-card position-relative overflow-hidden py-2 bg-light text-dark rounded-2 position-relative flex-column justify-center swiper-slide">
+						<ul class="action position-absolute">
+							<li class="justify-center add-to-cart position-relative mb-1 rounded-1">
+								<i class="fa-solid fa-shopping-cart  fs-10"></i>
+								<span class="position-absolute fs-12 position-relative zi-1 bg-danger text-light rounded-1 top-50 translate-middle-y">
+									Add To Cart
+									<span class="square"></span>
+								</span>
+							</li>
+							<li class="justify-center show-details position-relative rounded-1">
+								<i class="fa-solid fa-eye fs-10"></i>
+								<span class="position-absolute fs-12 position-relative zi-1 bg-danger text-light rounded-1 top-50 translate-middle-y">
+									See Details
+									<span class="square"></span>
+								</span>
+							</li>
+						</ul>
+						<div class="product-img w-100 h-150 p-2 justify-center overflow-hidden">
+							<img src="assets/keyboard/2.png" class="img-fluid w-60">
+						</div>
+						<div class="product-details w-100 pt-3 px-2">
+							<a href="#" class="text-decoration-none">
+								<p class="category m-0 text-secondary text-capitalize fs-9">
+									keyboard
+								</p>
+							</a>
+							<a href="#" class="text-decoration-none">
+								<h4 class="text-light show-details-link product-name m-0 fs-6 text-uppercase pt-1">
+									Logitech MK270 Wireless Keyboard 2.4 GHz, 8 Multimedia keys.
+								</h4>
+							</a>
+							<div class="stars text-danger fs-6 pt-1">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<span class="ratings-point ps-1">4.0</span>
+							</div>
+							<div class="d-flex gap-15 pt-2 align-items-center m-0 p-0">
+								<h4 class="fs-6 d-flex text-danger align-items-center m-0 text-decoration-line-through">$
+									<span class="prev-price">37</span>
+								</h4>
+								<h4 class="fs-6 d-flex align-items-center m-0 ">$
+									<span class="curr-price">31</span>
+								</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div data-items="gamepad" class="card col d-none col-6 col-sm-4 col-md-3 p-1">
+					<div class="product-card position-relative overflow-hidden py-2 bg-light text-dark rounded-2 position-relative flex-column justify-center swiper-slide">
+						<ul class="action position-absolute">
+							<li class="justify-center add-to-cart position-relative mb-1 rounded-1">
+								<i class="fa-solid fa-shopping-cart  fs-10"></i>
+								<span class="position-absolute fs-12 position-relative zi-1 bg-danger text-light rounded-1 top-50 translate-middle-y">
+									Add To Cart
+									<span class="square"></span>
+								</span>
+							</li>
+							<li class="justify-center show-details position-relative rounded-1">
+								<i class="fa-solid fa-eye fs-10"></i>
+								<span class="position-absolute fs-12 position-relative zi-1 bg-danger text-light rounded-1 top-50 translate-middle-y">
+									See Details
+									<span class="square"></span>
+								</span>
+							</li>
+						</ul>
+						<div class="product-img w-100 h-150 p-2 justify-center overflow-hidden">
+							<img src="assets/gamepad/5.png" class="img-fluid w-60">
+						</div>
+						<div class="product-details w-100 pt-3 px-2">
+							<a href="#" class="text-decoration-none">
+								<p class="category m-0 text-secondary text-capitalize fs-9">
+									gamepad
+								</p>
+							</a>
+							<a href="#" class="text-decoration-none">
+								<h4 class="text-light show-details-link product-name m-0 fs-6 text-uppercase pt-1">
+									Logitech PlayStation 3 Cordless Precision Controller Gamepad
+								</h4>
+							</a>
+							<div class="stars text-danger fs-6 pt-1">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star-half"></i>
+								<span class="ratings-point ps-1">2.5</span>
+							</div>
+							<div class="d-flex gap-15 pt-2 align-items-center m-0 p-0">
+								<h4 class="fs-6 d-flex text-danger align-items-center m-0 text-decoration-line-through">$
+									<span class="prev-price">40</span>
+								</h4>
+								<h4 class="fs-6 d-flex align-items-center m-0 ">$
+									<span class="curr-price">37</span>
+								</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div data-items="headphone" class="card col col-6 col-sm-4 col-md-3 p-1">
+					<div class="product-card position-relative overflow-hidden py-2 bg-light text-dark rounded-2 position-relative flex-column justify-center swiper-slide">
+						<ul class="action position-absolute">
+							<li class="justify-center add-to-cart position-relative mb-1 rounded-1">
+								<i class="fa-solid fa-shopping-cart  fs-10"></i>
+								<span class="position-absolute fs-12 position-relative zi-1 bg-danger text-light rounded-1 top-50 translate-middle-y">
+									Add To Cart
+									<span class="square"></span>
+								</span>
+							</li>
+							<li class="justify-center show-details position-relative rounded-1">
+								<i class="fa-solid fa-eye fs-10"></i>
+								<span class="position-absolute fs-12 position-relative zi-1 bg-danger text-light rounded-1 top-50 translate-middle-y">
+									See Details
+									<span class="square"></span>
+								</span>
+							</li>
+						</ul>
+						<div class="product-img w-100 h-150 p-2 justify-center overflow-hidden">
+							<img src="assets/headphone/1.png" class="img-fluid w-55">
+						</div>
+						<div class="product-details w-100 pt-3 px-2">
+							<a href="#" class="text-decoration-none">
+								<p class="category m-0 text-secondary text-capitalize fs-9">
+									headphone
+								</p>
+							</a>
+							<a href="#" class="text-decoration-none">
+								<h4 class="text-light show-details-link product-name m-0 fs-6 text-uppercase pt-1">
+									uisi F310 Wired Gamepad Controller Layout 4 Switch
+								</h4>
+							</a>
+							<div class="stars text-danger fs-6 pt-1">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star-half"></i>
+								<span class="ratings-point ps-1">4.0</span>
+							</div>
+							<div class="d-flex gap-15 pt-2 align-items-center m-0 p-0">
+								<h4 class="fs-6 d-flex text-danger align-items-center m-0 text-decoration-line-through">$
+									<span class="prev-price">366</span>
+								</h4>
+								<h4 class="fs-6 d-flex align-items-center m-0 ">$
+									<span class="curr-price">269</span>
+								</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div data-items="gamepad" class="card col d-none col-6 col-sm-4 col-md-3 p-1">
+					<div class="product-card position-relative overflow-hidden py-2 bg-light text-dark rounded-2 position-relative flex-column justify-center swiper-slide">
+						<ul class="action position-absolute">
+							<li class="justify-center add-to-cart position-relative mb-1 rounded-1">
+								<i class="fa-solid fa-shopping-cart  fs-10"></i>
+								<span class="position-absolute fs-12 position-relative zi-1 bg-danger text-light rounded-1 top-50 translate-middle-y">
+									Add To Cart
+									<span class="square"></span>
+								</span>
+							</li>
+							<li class="justify-center show-details position-relative rounded-1">
+								<i class="fa-solid fa-eye fs-10"></i>
+								<span class="position-absolute fs-12 position-relative zi-1 bg-danger text-light rounded-1 top-50 translate-middle-y">
+									See Details
+									<span class="square"></span>
+								</span>
+							</li>
+						</ul>
+						<div class="product-img w-100 h-150 p-2 justify-center overflow-hidden">
+							<img src="assets/gamepad/6.png" class="img-fluid w-60">
+						</div>
+						<div class="product-details w-100 pt-3 px-2">
+							<a href="#" class="text-decoration-none">
+								<p class="category m-0 text-secondary text-capitalize fs-9">
+									gamepad
+								</p>
+							</a>
+							<a href="#" class="text-decoration-none">
+								<h4 class="text-light show-details-link product-name m-0 fs-6 text-uppercase pt-1">
+									8BitDo Pro 2 for Switch PC, Android, Steam & Raspberry Pi
+								</h4>
+							</a>
+							<div class="stars text-danger fs-6 pt-1">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star-half"></i>
+								<span class="ratings-point ps-1">4.5</span>
+							</div>
+							<div class="d-flex gap-15 pt-2 align-items-center m-0 p-0">
+								<h4 class="fs-6 d-flex text-danger align-items-center m-0 text-decoration-line-through">$
+									<span class="prev-price">33</span>
+								</h4>
+								<h4 class="fs-6 d-flex align-items-center m-0 ">$
+									<span class="curr-price">27</span>
+								</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div data-items="keyboard" class="card col col-6 col-sm-4 col-md-3 p-1">
+					<div class="product-card position-relative overflow-hidden py-2 bg-light text-dark rounded-2 position-relative flex-column justify-center swiper-slide">
+						<ul class="action position-absolute">
+							<li class="justify-center add-to-cart position-relative mb-1 rounded-1">
+								<i class="fa-solid fa-shopping-cart  fs-10"></i>
+								<span class="position-absolute fs-12 position-relative zi-1 bg-danger text-light rounded-1 top-50 translate-middle-y">
+									Add To Cart
+									<span class="square"></span>
+								</span>
+							</li>
+							<li class="justify-center show-details position-relative rounded-1">
+								<i class="fa-solid fa-eye fs-10"></i>
+								<span class="position-absolute fs-12 position-relative zi-1 bg-danger text-light rounded-1 top-50 translate-middle-y">
+									See Details
+									<span class="square"></span>
+								</span>
+							</li>
+						</ul>
+						<div class="product-img w-100 h-150 p-2 justify-center overflow-hidden">
+							<img src="assets/keyboard/1.png" class="img-fluid w-60">
+						</div>
+						<div class="product-details w-100 pt-3 px-2">
+							<a href="#" class="text-decoration-none">
+								<p class="category m-0 text-secondary text-capitalize fs-9">
+									keyboard
+								</p>
+							</a>
+							<a href="#" class="text-decoration-none">
+								<h4 class="text-light show-details-link product-name m-0 fs-6 text-uppercase pt-1">
+									CORSAIR K55 RGB PRO-Dynamic RGB Backlighting Six Macro Keys.</h4>
+								</h4>
+							</a>
+							<div class="stars text-danger fs-6 pt-1">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<span class="ratings-point ps-1">4.0</span>
+							</div>
+							<div class="d-flex gap-15 pt-2 align-items-center m-0 p-0">
+								<h4 class="fs-6 d-flex text-danger align-items-center m-0 text-decoration-line-through">$
+									<span class="prev-price">47</span>
+								</h4>
+								<h4 class="fs-6 d-flex align-items-center m-0 ">$
+									<span class="curr-price">43</span>
+								</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div data-items="gamepad" class="card col col-6 col-sm-4 col-md-3 p-1">
+					<div class="product-card position-relative overflow-hidden py-2 bg-light text-dark rounded-2 position-relative flex-column justify-center swiper-slide">
+						<ul class="action position-absolute">
+							<li class="justify-center add-to-cart position-relative mb-1 rounded-1">
+								<i class="fa-solid fa-shopping-cart  fs-10"></i>
+								<span class="position-absolute fs-12 position-relative zi-1 bg-danger text-light rounded-1 top-50 translate-middle-y">
+									Add To Cart
+									<span class="square"></span>
+								</span>
+							</li>
+							<li class="justify-center show-details position-relative rounded-1">
+								<i class="fa-solid fa-eye fs-10"></i>
+								<span class="position-absolute fs-12 position-relative zi-1 bg-danger text-light rounded-1 top-50 translate-middle-y">
+									See Details
+									<span class="square"></span>
+								</span>
+							</li>
+						</ul>
+						<div class="product-img w-100 h-150 p-2 justify-center overflow-hidden">
+							<img src="assets/gamepad/3.png" class="img-fluid w-60">
+						</div>
+						<div class="product-details w-100 pt-3 px-2">
+							<a href="#" class="text-decoration-none">
+								<p class="category m-0 text-secondary text-capitalize fs-9">
+									gamepad
+								</p>
+							</a>
+							<a href="#" class="text-decoration-none">
+								<h4 class="text-light show-details-link product-name m-0 fs-6 text-uppercase pt-1">
+									8BitDo Pro 2 for Switch PC, Android, Steam & Raspberry Pi
+								</h4>
+							</a>
+							<div class="stars text-danger fs-6 pt-1">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star-half"></i>
+								<span class="ratings-point ps-1">4.5</span>
+							</div>
+							<div class="d-flex gap-15 pt-2 align-items-center m-0 p-0">
+								<h4 class="fs-6 d-flex text-danger align-items-center m-0 text-decoration-line-through">$
+									<span class="prev-price">33</span>
+								</h4>
+								<h4 class="fs-6 d-flex align-items-center m-0 ">$
+									<span class="curr-price">27</span>
+								</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div data-items="mouse" class="card col col-6 col-sm-4 col-md-3 p-1">
+					<div class="product-card position-relative overflow-hidden py-2 bg-light text-dark rounded-2 position-relative flex-column justify-center swiper-slide">
+						<ul class="action position-absolute">
+							<li class="justify-center add-to-cart position-relative mb-1 rounded-1">
+								<i class="fa-solid fa-shopping-cart  fs-10"></i>
+								<span class="position-absolute fs-12 position-relative zi-1 bg-danger text-light rounded-1 top-50 translate-middle-y">
+									Add To Cart
+									<span class="square"></span>
+								</span>
+							</li>
+							<li class="justify-center show-details position-relative rounded-1">
+								<i class="fa-solid fa-eye fs-10"></i>
+								<span class="position-absolute fs-12 position-relative zi-1 bg-danger text-light rounded-1 top-50 translate-middle-y">
+									See Details
+									<span class="square"></span>
+								</span>
+							</li>
+						</ul>
+						<div class="product-img w-100 h-150 p-2 justify-center overflow-hidden">
+							<img src="assets/mouse/1.png" class="img-fluid w-60">
+						</div>
+						<div class="product-details w-100 pt-3 px-2">
+							<a href="#" class="text-decoration-none">
+								<p class="category m-0 text-secondary text-capitalize fs-9">
+									Mouse
+								</p>
+							</a>
+							<a href="#" class="text-decoration-none">
+								<h4 class="text-light show-details-link product-name m-0 fs-6 text-uppercase pt-1">
+									ASUS ROG Gladius II Gaming Mouse | Tuned 19,000 DPI Sensor.
+								</h4>
+							</a>
+							<div class="stars text-danger fs-6 pt-1">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<span class="ratings-point ps-1">3.0</span>
+							</div>
+							<div class="d-flex gap-15 pt-2 align-items-center m-0 p-0">
+								<h4 class="fs-6 d-flex text-danger align-items-center m-0 text-decoration-line-through">$
+									<span class="prev-price">28</span>
+								</h4>
+								<h4 class="fs-6 d-flex align-items-center m-0 ">$
+									<span class="curr-price">26</span>
+								</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div data-items="gamepad" class="card col col-6 col-sm-4 col-md-3 p-1">
+					<div class="product-card position-relative overflow-hidden py-2 bg-light text-dark rounded-2 position-relative flex-column justify-center swiper-slide">
+						<ul class="action position-absolute">
+							<li class="justify-center add-to-cart position-relative mb-1 rounded-1">
+								<i class="fa-solid fa-shopping-cart  fs-10"></i>
+								<span class="position-absolute fs-12 position-relative zi-1 bg-danger text-light rounded-1 top-50 translate-middle-y">
+									Add To Cart
+									<span class="square"></span>
+								</span>
+							</li>
+							<li class="justify-center show-details position-relative rounded-1">
+								<i class="fa-solid fa-eye fs-10"></i>
+								<span class="position-absolute fs-12 position-relative zi-1 bg-danger text-light rounded-1 top-50 translate-middle-y">
+									See Details
+									<span class="square"></span>
+								</span>
+							</li>
+						</ul>
+						<div class="product-img w-100 h-150 p-2 justify-center overflow-hidden">
+							<img src="assets/gamepad/1.png" class="img-fluid w-60">
+						</div>
+						<div class="product-details w-100 pt-3 px-2">
+							<a href="#" class="text-decoration-none">
+								<p class="category m-0 text-secondary text-capitalize fs-9">
+									gamepad
+								</p>
+							</a>
+							<a href="#" class="text-decoration-none">
+								<h4 class="text-light show-details-link product-name m-0 fs-6 text-uppercase pt-1">
+									Razer Wolverine V2 Wired Gaming Controller for Xbox Series
+								</h4>
+							</a>
+							<div class="stars text-danger fs-6 pt-1">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<span class="ratings-point ps-1">2.0</span>
+							</div>
+							<div class="d-flex gap-15 pt-2 align-items-center m-0 p-0">
+								<h4 class="fs-6 d-flex text-danger align-items-center m-0 text-decoration-line-through">$
+									<span class="prev-price">43</span>
+								</h4>
+								<h4 class="fs-6 d-flex align-items-center m-0 ">$
+									<span class="curr-price">39</span>
+								</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div data-items="keyboard" class="card col col-6 col-sm-4 col-md-3 p-1">
+					<div class="product-card position-relative overflow-hidden py-2 bg-light text-dark rounded-2 position-relative flex-column justify-center swiper-slide">
+						<ul class="action position-absolute">
+							<li class="justify-center add-to-cart position-relative mb-1 rounded-1">
+								<i class="fa-solid fa-shopping-cart  fs-10"></i>
+								<span class="position-absolute fs-12 position-relative zi-1 bg-danger text-light rounded-1 top-50 translate-middle-y">
+									Add To Cart
+									<span class="square"></span>
+								</span>
+							</li>
+							<li class="justify-center show-details position-relative rounded-1">
+								<i class="fa-solid fa-eye fs-10"></i>
+								<span class="position-absolute fs-12 position-relative zi-1 bg-danger text-light rounded-1 top-50 translate-middle-y">
+									See Details
+									<span class="square"></span>
+								</span>
+							</li>
+						</ul>
+						<div class="product-img w-100 h-150 p-2 justify-center overflow-hidden">
+							<img src="assets/keyboard/3.png" class="img-fluid w-60">
+						</div>
+						<div class="product-details w-100 pt-3 px-2">
+							<a href="#" class="text-decoration-none">
+								<p class="category m-0 text-secondary text-capitalize fs-9">
+									keyboard
+								</p>
+							</a>
+							<a href="#" class="text-decoration-none">
+								<h4 class="text-light show-details-link product-name m-0 fs-6 text-uppercase pt-1">
+									CORSAIR K55 RGB PRO-Dynamic RGB Backlighting Six Macro Keys.</h4>
+								</h4>
+							</a>
+							<div class="stars text-danger fs-6 pt-1">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<span class="ratings-point ps-1">4.0</span>
+							</div>
+							<div class="d-flex gap-15 pt-2 align-items-center m-0 p-0">
+								<h4 class="fs-6 d-flex text-danger align-items-center m-0 text-decoration-line-through">$
+									<span class="prev-price">47</span>
+								</h4>
+								<h4 class="fs-6 d-flex align-items-center m-0 ">$
+									<span class="curr-price">43</span>
+								</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div data-items="gamepad" class="card col col-6 col-sm-4 col-md-3 p-1">
+					<div class="product-card position-relative overflow-hidden py-2 bg-light text-dark rounded-2 position-relative flex-column justify-center swiper-slide">
+						<ul class="action position-absolute">
+							<li class="justify-center add-to-cart position-relative mb-1 rounded-1">
+								<i class="fa-solid fa-shopping-cart  fs-10"></i>
+								<span class="position-absolute fs-12 position-relative zi-1 bg-danger text-light rounded-1 top-50 translate-middle-y">
+									Add To Cart
+									<span class="square"></span>
+								</span>
+							</li>
+							<li class="justify-center show-details position-relative rounded-1">
+								<i class="fa-solid fa-eye fs-10"></i>
+								<span class="position-absolute fs-12 position-relative zi-1 bg-danger text-light rounded-1 top-50 translate-middle-y">
+									See Details
+									<span class="square"></span>
+								</span>
+							</li>
+						</ul>
+						<div class="product-img w-100 h-150 p-2 justify-center overflow-hidden">
+							<img src="assets/gamepad/4.png" class="img-fluid w-60">
+						</div>
+						<div class="product-details w-100 pt-3 px-2">
+							<a href="#" class="text-decoration-none">
+								<p class="category m-0 text-secondary text-capitalize fs-9">
+									gamepad
+								</p>
+							</a>
+							<a href="#" class="text-decoration-none">
+								<h4 class="text-light show-details-link product-name m-0 fs-6 text-uppercase pt-1">
+									PowerA Enhanced Wired Controller for Xbox Series X|S - Black </h4>
+								</h4>
+							</a>
+							<div class="stars text-danger fs-6 pt-1">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star-half"></i>
+								<span class="ratings-point ps-1">3.5</span>
+							</div>
+							<div class="d-flex gap-15 pt-2 align-items-center m-0 p-0">
+								<h4 class="fs-6 d-flex text-danger align-items-center m-0 text-decoration-line-through">$
+									<span class="prev-price">37</span>
+								</h4>
+								<h4 class="fs-6 d-flex align-items-center m-0 ">$
+									<span class="curr-price">29</span>
+								</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div data-items="keyboard" class="card col d-none col-6 col-sm-4 col-md-3 p-1">
+					<div class="product-card position-relative overflow-hidden py-2 bg-light text-dark rounded-2 position-relative flex-column justify-center swiper-slide">
+						<ul class="action position-absolute">
+							<li class="justify-center add-to-cart position-relative mb-1 rounded-1">
+								<i class="fa-solid fa-shopping-cart  fs-10"></i>
+								<span class="position-absolute fs-12 position-relative zi-1 bg-danger text-light rounded-1 top-50 translate-middle-y">
+									Add To Cart
+									<span class="square"></span>
+								</span>
+							</li>
+							<li class="justify-center show-details position-relative rounded-1">
+								<i class="fa-solid fa-eye fs-10"></i>
+								<span class="position-absolute fs-12 position-relative zi-1 bg-danger text-light rounded-1 top-50 translate-middle-y">
+									See Details
+									<span class="square"></span>
+								</span>
+							</li>
+						</ul>
+						<div class="product-img w-100 h-150 p-2 justify-center overflow-hidden">
+							<img src="assets/keyboard/4.png" class="img-fluid w-60">
+						</div>
+						<div class="product-details w-100 pt-3 px-2">
+							<a href="#" class="text-decoration-none">
+								<p class="category m-0 text-secondary text-capitalize fs-9">
+									keyboard
+								</p>
+							</a>
+							<a href="#" class="text-decoration-none">
+								<h4 class="text-light show-details-link product-name m-0 fs-6 text-uppercase pt-1">
+									CORSAIR K55 RGB PRO-Dynamic RGB Backlighting Six Macro Keys.</h4>
+								</h4>
+							</a>
+							<div class="stars text-danger fs-6 pt-1">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<span class="ratings-point ps-1">4.0</span>
+							</div>
+							<div class="d-flex gap-15 pt-2 align-items-center m-0 p-0">
+								<h4 class="fs-6 d-flex text-danger align-items-center m-0 text-decoration-line-through">$
+									<span class="prev-price">47</span>
+								</h4>
+								<h4 class="fs-6 d-flex align-items-center m-0 ">$
+									<span class="curr-price">43</span>
+								</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div data-items="graphics-card" class="card d-none col col-6 col-sm-4 col-md-3 p-1">
+					<div class="product-card position-relative overflow-hidden py-2 bg-light text-dark rounded-2 position-relative flex-column justify-center swiper-slide">
+						<ul class="action position-absolute">
+							<li class="justify-center add-to-cart position-relative mb-1 rounded-1">
+								<i class="fa-solid fa-shopping-cart  fs-10"></i>
+								<span class="position-absolute fs-12 position-relative zi-1 bg-danger text-light rounded-1 top-50 translate-middle-y">
+									Add To Cart
+									<span class="square"></span>
+								</span>
+							</li>
+							<li class="justify-center show-details position-relative rounded-1">
+								<i class="fa-solid fa-eye fs-10"></i>
+								<span class="position-absolute fs-12 position-relative zi-1 bg-danger text-light rounded-1 top-50 translate-middle-y">
+									See Details
+									<span class="square"></span>
+								</span>
+							</li>
+						</ul>
+						<div class="product-img w-100 h-150 p-2 justify-center overflow-hidden">
+							<img src="assets/gCard/2.png" class="img-fluid w-60">
+						</div>
+						<div class="product-details w-100 pt-3 px-2">
+							<a href="#" class="text-decoration-none">
+								<p class="category m-0 text-secondary text-capitalize fs-9">
+									graphics card
+								</p>
+							</a>
+							<a href="#" class="text-decoration-none">
+								<h4 class="text-light show-details-link product-name m-0 fs-6 text-uppercase pt-1">
+									nvidia rtx 3060ti lpddr6 8gb graphics card trpple fan
+								</h4>
+							</a>
+							<div class="stars text-danger fs-6 pt-1">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<span class="ratings-point ps-1">4.0</span>
+							</div>
+							<div class="d-flex gap-15 pt-2 align-items-center m-0 p-0">
+								<h4 class="fs-6 d-flex text-danger align-items-center m-0 text-decoration-line-through">$
+									<span class="prev-price">830</span>
+								</h4>
+								<h4 class="fs-6 d-flex align-items-center m-0 ">$
+									<span class="curr-price">802</span>
+								</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div data-items="mouse" class="card col col-6 d-none  col-sm-4 col-md-3 p-1">
+					<div class="product-card position-relative overflow-hidden py-2 bg-light text-dark rounded-2 position-relative flex-column justify-center swiper-slide">
+						<ul class="action position-absolute">
+							<li class="justify-center add-to-cart position-relative mb-1 rounded-1">
+								<i class="fa-solid fa-shopping-cart  fs-10"></i>
+								<span class="position-absolute fs-12 position-relative zi-1 bg-danger text-light rounded-1 top-50 translate-middle-y">
+									Add To Cart
+									<span class="square"></span>
+								</span>
+							</li>
+							<li class="justify-center show-details position-relative rounded-1">
+								<i class="fa-solid fa-eye fs-10"></i>
+								<span class="position-absolute fs-12 position-relative zi-1 bg-danger text-light rounded-1 top-50 translate-middle-y">
+									See Details
+									<span class="square"></span>
+								</span>
+							</li>
+						</ul>
+						<div class="product-img w-100 h-150 p-2 justify-center overflow-hidden">
+							<img src="assets/mouse/3.png" class="img-fluid w-60">
+						</div>
+						<div class="product-details w-100 pt-3 px-2">
+							<a href="#" class="text-decoration-none">
+								<p class="category m-0 text-secondary text-capitalize fs-9">
+									Mouse
+								</p>
+							</a>
+							<a href="#" class="text-decoration-none">
+								<h4 class="text-light show-details-link product-name m-0 fs-6 text-uppercase pt-1">
+									ASUS ROG Gladius II Gaming Mouse | Tuned 19,000 DPI Sensor.
+								</h4>
+							</a>
+							<div class="stars text-danger fs-6 pt-1">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<span class="ratings-point ps-1">3.0</span>
+							</div>
+							<div class="d-flex gap-15 pt-2 align-items-center m-0 p-0">
+								<h4 class="fs-6 d-flex text-danger align-items-center m-0 text-decoration-line-through">$
+									<span class="prev-price">28</span>
+								</h4>
+								<h4 class="fs-6 d-flex align-items-center m-0 ">$
+									<span class="curr-price">26</span>
+								</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div data-items="headphone" class="card col d-none col-6 col-sm-4 col-md-3 p-1">
+					<div class="product-card position-relative overflow-hidden py-2 bg-light text-dark rounded-2 position-relative flex-column justify-center swiper-slide">
+						<ul class="action position-absolute">
+							<li class="justify-center add-to-cart position-relative mb-1 rounded-1">
+								<i class="fa-solid fa-shopping-cart  fs-10"></i>
+								<span class="position-absolute fs-12 position-relative zi-1 bg-danger text-light rounded-1 top-50 translate-middle-y">
+									Add To Cart
+									<span class="square"></span>
+								</span>
+							</li>
+							<li class="justify-center show-details position-relative rounded-1">
+								<i class="fa-solid fa-eye fs-10"></i>
+								<span class="position-absolute fs-12 position-relative zi-1 bg-danger text-light rounded-1 top-50 translate-middle-y">
+									See Details
+									<span class="square"></span>
+								</span>
+							</li>
+						</ul>
+						<div class="product-img w-100 h-150 px-2 justify-center overflow-hidden">
+							<img src="assets/headphone/3.png" class="img-fluid w-30">
+						</div>
+						<div class="product-details w-100 pt-3 px-2">
+							<a href="#" class="text-decoration-none">
+								<p class="category m-0 text-secondary text-capitalize fs-9">
+									headphone
+								</p>
+							</a>
+							<a href="#" class="text-decoration-none">
+								<h4 class="text-light show-details-link product-name m-0 fs-6 text-uppercase pt-1">
+									uisi F310 Wired Gamepad Controller Layout 4 Switch
+								</h4>
+							</a>
+							<div class="stars text-danger fs-6 pt-1">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star-half"></i>
+								<span class="ratings-point ps-1">4.0</span>
+							</div>
+							<div class="d-flex gap-15 pt-2 align-items-center m-0 p-0">
+								<h4 class="fs-6 d-flex text-danger align-items-center m-0 text-decoration-line-through">$
+									<span class="prev-price">366</span>
+								</h4>
+								<h4 class="fs-6 d-flex align-items-center m-0 ">$
+									<span class="curr-price">269</span>
+								</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div data-items="graphics-card" class="card col col-6 col-sm-4 col-md-3 p-1">
+					<div class="product-card position-relative overflow-hidden py-2 bg-light text-dark rounded-2 position-relative flex-column justify-center swiper-slide">
+						<ul class="action position-absolute">
+							<li class="justify-center add-to-cart position-relative mb-1 rounded-1">
+								<i class="fa-solid fa-shopping-cart  fs-10"></i>
+								<span class="position-absolute fs-12 position-relative zi-1 bg-danger text-light rounded-1 top-50 translate-middle-y">
+									Add To Cart
+									<span class="square"></span>
+								</span>
+							</li>
+							<li class="justify-center show-details position-relative rounded-1">
+								<i class="fa-solid fa-eye fs-10"></i>
+								<span class="position-absolute fs-12 position-relative zi-1 bg-danger text-light rounded-1 top-50 translate-middle-y">
+									See Details
+									<span class="square"></span>
+								</span>
+							</li>
+						</ul>
+						<div class="product-img w-100 h-150 p-2 justify-center overflow-hidden">
+							<img src="assets/gCard/1.png" class="img-fluid w-60">
+						</div>
+						<div class="product-details w-100 pt-3 px-2">
+							<a href="#" class="text-decoration-none">
+								<p class="category m-0 text-secondary text-capitalize fs-9">
+									graphics card
+								</p>
+							</a>
+							<a href="#" class="text-decoration-none">
+								<h4 class="text-light show-details-link product-name m-0 fs-6 text-uppercase pt-1">
+									Gigabyte rtx 3050ti lpddr5 4gb graphic card with dual fan
+								</h4>
+							</a>
+							<div class="stars text-danger fs-6 pt-1">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<span class="ratings-point ps-1">5.0</span>
+							</div>
+							<div class="d-flex gap-15 pt-2 align-items-center m-0 p-0">
+								<h4 class="fs-6 d-flex text-danger align-items-center m-0 text-decoration-line-through">$
+									<span class="prev-price">1273</span>
+								</h4>
+								<h4 class="fs-6 d-flex align-items-center m-0 ">$
+									<span class="curr-price">1099</span>
+								</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div data-items="headphone" class="card col col-6 col-sm-4 col-md-3 p-1">
+					<div class="product-card position-relative overflow-hidden py-2 bg-light text-dark rounded-2 position-relative flex-column justify-center swiper-slide">
+						<ul class="action position-absolute">
+							<li class="justify-center add-to-cart position-relative mb-1 rounded-1">
+								<i class="fa-solid fa-shopping-cart  fs-10"></i>
+								<span class="position-absolute fs-12 position-relative zi-1 bg-danger text-light rounded-1 top-50 translate-middle-y">
+									Add To Cart
+									<span class="square"></span>
+								</span>
+							</li>
+							<li class="justify-center show-details position-relative rounded-1">
+								<i class="fa-solid fa-eye fs-10"></i>
+								<span class="position-absolute fs-12 position-relative zi-1 bg-danger text-light rounded-1 top-50 translate-middle-y">
+									See Details
+									<span class="square"></span>
+								</span>
+							</li>
+						</ul>
+						<div class="product-img w-100 h-150 p-2 justify-center overflow-hidden">
+							<img src="assets/headphone/2.png" class="img-fluid w-75">
+						</div>
+						<div class="product-details w-100 pt-3 px-2">
+							<a href="#" class="text-decoration-none">
+								<p class="category m-0 text-secondary text-capitalize fs-9">
+									headphone
+								</p>
+							</a>
+							<a href="#" class="text-decoration-none">
+								<h4 class="text-light show-details-link product-name m-0 fs-6 text-uppercase pt-1">
+									uisi F310 Wired Gamepad Controller Layout 4 Switch
+								</h4>
+							</a>
+							<div class="stars text-danger fs-6 pt-1">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star-half"></i>
+								<span class="ratings-point ps-1">4.0</span>
+							</div>
+							<div class="d-flex gap-15 pt-2 align-items-center m-0 p-0">
+								<h4 class="fs-6 d-flex text-danger align-items-center m-0 text-decoration-line-through">$
+									<span class="prev-price">366</span>
+								</h4>
+								<h4 class="fs-6 d-flex align-items-center m-0 ">$
+									<span class="curr-price">269</span>
+								</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div data-items="keyboard" class="card col d-none col-6 col-sm-4 col-md-3 p-1">
+					<div class="product-card position-relative overflow-hidden py-2 bg-light text-dark rounded-2 position-relative flex-column justify-center swiper-slide">
+						<ul class="action position-absolute">
+							<li class="justify-center add-to-cart position-relative mb-1 rounded-1">
+								<i class="fa-solid fa-shopping-cart  fs-10"></i>
+								<span class="position-absolute fs-12 position-relative zi-1 bg-danger text-light rounded-1 top-50 translate-middle-y">
+									Add To Cart
+									<span class="square"></span>
+								</span>
+							</li>
+							<li class="justify-center show-details position-relative rounded-1">
+								<i class="fa-solid fa-eye fs-10"></i>
+								<span class="position-absolute fs-12 position-relative zi-1 bg-danger text-light rounded-1 top-50 translate-middle-y">
+									See Details
+									<span class="square"></span>
+								</span>
+							</li>
+						</ul>
+						<div class="product-img w-100 h-150 p-2 justify-center overflow-hidden">
+							<img src="assets/keyboard/5.png" class="img-fluid w-60">
+						</div>
+						<div class="product-details w-100 pt-3 px-2">
+							<a href="#" class="text-decoration-none">
+								<p class="category m-0 text-secondary text-capitalize fs-9">
+									keyboard
+								</p>
+							</a>
+							<a href="#" class="text-decoration-none">
+								<h4 class="text-light show-details-link product-name m-0 fs-6 text-uppercase pt-1">
+									CORSAIR K55 RGB PRO-Dynamic RGB Backlighting Six Macro Keys.</h4>
+								</h4>
+							</a>
+							<div class="stars text-danger fs-6 pt-1">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<span class="ratings-point ps-1">4.0</span>
+							</div>
+							<div class="d-flex gap-15 pt-2 align-items-center m-0 p-0">
+								<h4 class="fs-6 d-flex text-danger align-items-center m-0 text-decoration-line-through">$
+									<span class="prev-price">47</span>
+								</h4>
+								<h4 class="fs-6 d-flex align-items-center m-0 ">$
+									<span class="curr-price">43</span>
+								</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div data-items="headphone" class="card col col-6 col-sm-4 col-md-3 p-1">
+					<div class="product-card position-relative overflow-hidden py-2 bg-light text-dark rounded-2 position-relative flex-column justify-center swiper-slide">
+						<ul class="action position-absolute">
+							<li class="justify-center add-to-cart position-relative mb-1 rounded-1">
+								<i class="fa-solid fa-shopping-cart  fs-10"></i>
+								<span class="position-absolute fs-12 position-relative zi-1 bg-danger text-light rounded-1 top-50 translate-middle-y">
+									Add To Cart
+									<span class="square"></span>
+								</span>
+							</li>
+							<li class="justify-center show-details position-relative rounded-1">
+								<i class="fa-solid fa-eye fs-10"></i>
+								<span class="position-absolute fs-12 position-relative zi-1 bg-danger text-light rounded-1 top-50 translate-middle-y">
+									See Details
+									<span class="square"></span>
+								</span>
+							</li>
+						</ul>
+						<div class="product-img w-100 h-150 p-2 justify-center overflow-hidden">
+							<img src="assets/headphone/4.png" class="img-fluid w-60">
+						</div>
+						<div class="product-details w-100 pt-3 px-2">
+							<a href="#" class="text-decoration-none">
+								<p class="category m-0 text-secondary text-capitalize fs-9">
+									headphone
+								</p>
+							</a>
+							<a href="#" class="text-decoration-none">
+								<h4 class="text-light show-details-link product-name m-0 fs-6 text-uppercase pt-1">
+									uisi F310 Wired Gamepad Controller Layout 4 Switch
+								</h4>
+							</a>
+							<div class="stars text-danger fs-6 pt-1">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star-half"></i>
+								<span class="ratings-point ps-1">4.0</span>
+							</div>
+							<div class="d-flex gap-15 pt-2 align-items-center m-0 p-0">
+								<h4 class="fs-6 d-flex text-danger align-items-center m-0 text-decoration-line-through">$
+									<span class="prev-price">366</span>
+								</h4>
+								<h4 class="fs-6 d-flex align-items-center m-0 ">$
+									<span class="curr-price">269</span>
+								</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</section>
+	<!-- SUGGESTD PRODUCTS -->
+	<div class="suggested-products dark product-slider py-3">
+
+		<div class="swiper w-90 mx-auto">
+			<h3 class="heading">Just For You</h3>
+			<div class="swiper-wrapper p-3">
+
+				<div class="product-card position-relative overflow-hidden card-shadow py-2 bg-dark rounded-2 position-relative flex-column justify-center swiper-slide">
+					<ul class="action position-absolute">
+						<li class="justify-center add-to-cart position-relative mb-1 rounded-1">
+							<i class="fa-solid fa-shopping-cart fs-10"></i>
+							<span class="position-absolute fs-12 position-relative zi-1 bg-danger rounded-1 top-50 translate-middle-y">
+								Add To Cart
+								<span class="square"></span>
+							</span>
+						</li>
+						<li class="justify-center show-details position-relative rounded-1">
+							<i class="fa-solid fa-eye fs-10"></i>
+							<span class="position-absolute fs-12 position-relative zi-1 bg-danger text-light rounded-1 top-50 translate-middle-y">
+								See Details
+								<span class="square"></span>
+							</span>
+						</li>
+					</ul>
+					<div class="product-img w-100 h-150 p-2 justify-center overflow-hidden">
+						<img src="assets/gamepad/2.png" class="img-fluid w-60">
+					</div>
+					<div class="product-details w-100 pt-3 px-2">
+						<a href="#" class="text-decoration-none">
+							<p class="category m-0 text-secondary text-capitalize" data-category="gamepad">
+								gamepad
+							</p>
+						</a>
+						<a href="#" class="text-decoration-none">
+							<h4 class=" text-light show-details-link product-name m-0 fs-6 text-uppercase pt-1">
+								Logitech F310 Wired Gamepad Controller Layout 4 Switch
+							</h4>
+						</a>
+						<div class="stars text-danger fs-6 pt-1">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<span class="ratings-point ps-1">4.0</span>
+						</div>
+						<div class="d-flex gap-15 pt-2 align-items-center m-0 p-0">
+							<h4 class="fs-6 d-flex text-danger align-items-center m-0 text-decoration-line-through">$
+								<span class="prev-price">37</span>
+							</h4>
+							<h4 class="fs-6 d-flex align-items-center m-0">$
+								<span class="curr-price">31</span>
+							</h4>
+						</div>
+					</div>
+				</div>
+				<div class="product-card position-relative overflow-hidden card-shadow py-2 bg-dark rounded-2 position-relative flex-column justify-center swiper-slide">
+					<ul class="action position-absolute">
+						<li class="justify-center add-to-cart position-relative mb-1 rounded-1">
+							<i class="fa-solid fa-shopping-cart  fs-10"></i>
+							<span class="position-absolute fs-12 position-relative zi-1 bg-danger text-light rounded-1 top-50 translate-middle-y">
+								Add To Cart
+								<span class="square"></span>
+							</span>
+						</li>
+						<li class="justify-center show-details position-relative rounded-1">
+							<i class="fa-solid fa-eye fs-10"></i>
+							<span class="position-absolute fs-12 position-relative zi-1 bg-danger text-light rounded-1 top-50 translate-middle-y">
+								See Details
+								<span class="square"></span>
+							</span>
+						</li>
+					</ul>
+					<div class="product-img w-100 h-150 p-2 justify-center overflow-hidden">
+						<img src="assets/keyboard/1.png" class="img-fluid w-75">
+					</div>
+					<div class="product-details w-100 pt-3 px-2">
+						<a href="#" class="text-decoration-none">
+							<p class="category m-0 text-secondary text-capitalize" data-category="keyboard">
+								keyboard
+							</p>
+						</a>
+						<a href="#" class="text-decoration-none">
+							<h4 class=" text-light show-details-link product-name m-0 fs-6 text-uppercase pt-1">
+								Logitech MK270 Wireless Keyboard 2.4 GHz, 8 Multimedia keys.
+							</h4>
+						</a>
+						<div class="stars text-danger fs-6 pt-1">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<span class="ratings-point ps-1">3</span>
+						</div>
+						<div class="d-flex gap-15 pt-2 align-items-center m-0 p-0">
+							<h4 class="fs-6 d-flex text-danger align-items-center m-0 text-decoration-line-through">$
+								<span class="prev-price">33</span>
+							</h4>
+							<h4 class="fs-6 d-flex align-items-center m-0 ">$
+								<span class="curr-price">27</span>
+							</h4>
+						</div>
+					</div>
+				</div>
+				<div class="product-card position-relative overflow-hidden card-shadow py-2 bg-dark rounded-2 position-relative flex-column justify-center swiper-slide">
+					<ul class="action position-absolute">
+						<li class="justify-center add-to-cart position-relative mb-1 rounded-1">
+							<i class="fa-solid fa-shopping-cart  fs-10"></i>
+							<span class="position-absolute fs-12 position-relative zi-1 bg-danger text-light rounded-1 top-50 translate-middle-y">
+								Add To Cart
+								<span class="square"></span>
+							</span>
+						</li>
+						<li class="justify-center show-details position-relative rounded-1">
+							<i class="fa-solid fa-eye fs-10"></i>
+							<span class="position-absolute fs-12 position-relative zi-1 bg-danger text-light rounded-1 top-50 translate-middle-y">
+								See Details
+								<span class="square"></span>
+							</span>
+						</li>
+					</ul>
+					<div class="product-img w-100 h-150 p-2 justify-center overflow-hidden">
+						<img src="assets/mouse/2.png" class="img-fluid w-60">
+					</div>
+					<div class="product-details w-100 pt-3 px-2">
+						<a href="#" class="text-decoration-none">
+							<p class="category m-0 text-secondary text-capitalize" data-category="mouse">
+								mouse
+							</p>
+						</a>
+						<a href="#" class="text-decoration-none">
+							<h4 class=" text-light show-details-link product-name m-0 fs-6 text-uppercase pt-1">
+								Logitech M510 Wireless Mouse with USB Unifying Receiver.</h4>
+						</a>
+						<div class="stars text-danger fs-6 pt-1">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star-half"></i>
+							<span class="ratings-point ps-1">3.5</span>
+						</div>
+						<div class="d-flex gap-15 pt-2 align-items-center m-0 p-0">
+							<h4 class="fs-6 d-flex text-danger align-items-center m-0 text-decoration-line-through">$
+								<span class="prev-price">22</span>
+							</h4>
+							<h4 class="fs-6 d-flex align-items-center m-0 ">$
+								<span class="curr-price">18</span>
+							</h4>
+						</div>
+					</div>
+				</div>
+				<div class="product-card position-relative overflow-hidden card-shadow py-2 bg-dark rounded-2 position-relative flex-column justify-center swiper-slide">
+					<ul class="action position-absolute">
+						<li class="justify-center add-to-cart position-relative mb-1 rounded-1">
+							<i class="fa-solid fa-shopping-cart  fs-10"></i>
+							<span class="position-absolute fs-12 position-relative zi-1 bg-danger text-light rounded-1 top-50 translate-middle-y">
+								Add To Cart
+								<span class="square"></span>
+							</span>
+						</li>
+						<li class="justify-center show-details position-relative rounded-1">
+							<i class="fa-solid fa-eye fs-10"></i>
+							<span class="position-absolute fs-12 position-relative zi-1 bg-danger text-light rounded-1 top-50 translate-middle-y">
+								See Details
+								<span class="square"></span>
+							</span>
+						</li>
+					</ul>
+					<div class="product-img w-100 h-150 p-2 justify-center overflow-hidden">
+						<img src="assets/keyboard/3.png" class="img-fluid w-70">
+					</div>
+					<div class="product-details w-100 pt-3 px-2">
+						<a href="#" class="text-decoration-none">
+							<p class="category m-0 text-secondary text-capitalize" data-category="keyboard">
+								keyboard
+							</p>
+						</a>
+						<a href="#" class="text-decoration-none">
+							<h4 class=" text-light show-details-link product-name m-0 fs-6 text-uppercase pt-1">
+								CORSAIR K55 RGB PRO-Dynamic RGB Backlighting Six Macro Keys.</h4>
+						</a>
+						<div class="stars text-danger fs-6 pt-1">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star-half"></i>
+							<span class="ratings-point ps-1">3.5</span>
+						</div>
+						<div class="d-flex gap-15 pt-2 align-items-center m-0 p-0">
+							<h4 class="fs-6 d-flex text-danger align-items-center m-0 text-decoration-line-through">$
+								<span class="prev-price">25</span>
+							</h4>
+							<h4 class="fs-6 d-flex align-items-center m-0 ">$
+								<span class="curr-price">21</span>
+							</h4>
+						</div>
+					</div>
+				</div>
+				<div class="product-card position-relative overflow-hidden card-shadow py-2 bg-dark rounded-2 position-relative flex-column justify-center swiper-slide">
+					<ul class="action position-absolute">
+						<li class="justify-center add-to-cart position-relative mb-1 rounded-1">
+							<i class="fa-solid fa-shopping-cart  fs-10"></i>
+							<span class="position-absolute fs-12 position-relative zi-1 bg-danger text-light rounded-1 top-50 translate-middle-y">
+								Add To Cart
+								<span class="square"></span>
+							</span>
+						</li>
+						<li class="justify-center show-details position-relative rounded-1">
+							<i class="fa-solid fa-eye fs-10"></i>
+							<span class="position-absolute fs-12 position-relative zi-1 bg-danger text-light rounded-1 top-50 translate-middle-y">
+								See Details
+								<span class="square"></span>
+							</span>
+						</li>
+					</ul>
+					<div class="product-img w-100 h-150 p-2 justify-center overflow-hidden">
+						<img src="assets/gamepad/1.png" class="img-fluid w-70">
+					</div>
+					<div class="product-details w-100 pt-3 px-2">
+						<a href="#" class="text-decoration-none">
+							<p class="category m-0 text-secondary text-capitalize" data-category="gamepad">
+								gamepad
+							</p>
+						</a>
+						<a href="#" class="text-decoration-none">
+							<h4 class=" text-light show-details-link product-name m-0 fs-6 text-uppercase pt-1">
+								PowerA Enhanced Wired Controller for Xbox Series X|S - Black </h4>
+						</a>
+						<div class="stars text-danger fs-6 pt-1">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star-half"></i>
+							<span class="ratings-point ps-1">3.5</span>
+						</div>
+						<div class="d-flex gap-15 pt-2 align-items-center m-0 p-0">
+							<h4 class="fs-6 d-flex text-danger align-items-center m-0 text-decoration-line-through">$
+								<span class="prev-price">37</span>
+							</h4>
+							<h4 class="fs-6 d-flex align-items-center m-0 ">$
+								<span class="curr-price">31</span>
+							</h4>
+						</div>
+					</div>
+				</div>
+				<div class="product-card position-relative overflow-hidden card-shadow py-2 bg-dark rounded-2 position-relative flex-column justify-center swiper-slide">
+					<ul class="action position-absolute">
+						<li class="justify-center add-to-cart position-relative mb-1 rounded-1">
+							<i class="fa-solid fa-shopping-cart  fs-10"></i>
+							<span class="position-absolute fs-12 position-relative zi-1 bg-danger text-light rounded-1 top-50 translate-middle-y">
+								Add To Cart
+								<span class="square"></span>
+							</span>
+						</li>
+						<li class="justify-center show-details position-relative rounded-1">
+							<i class="fa-solid fa-eye fs-10"></i>
+							<span class="position-absolute fs-12 position-relative zi-1 bg-danger text-light rounded-1 top-50 translate-middle-y">
+								See Details
+								<span class="square"></span>
+							</span>
+						</li>
+					</ul>
+					<div class="product-img w-100 h-150 p-2 justify-center overflow-hidden">
+						<img src="assets/gamepad/5.png" class="img-fluid w-75">
+					</div>
+					<div class="product-details w-100 pt-3 px-2">
+						<a href="#" class="text-decoration-none">
+							<p class="category m-0 text-secondary text-capitalize" data-category="gamepad">
+								gamepad
+							</p>
+						</a>
+						<a href="#" class="text-decoration-none">
+							<h4 class=" text-light show-details-link product-name m-0 fs-6 text-uppercase pt-1">
+								Logitech PlayStation 3 Cordless Precision Controller Gamepad
+							</h4>
+						</a>
+						<div class="stars text-danger fs-6 pt-1">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<span class="ratings-point ps-1">3</span>
+						</div>
+						<div class="d-flex gap-15 pt-2 align-items-center m-0 p-0">
+							<h4 class="fs-6 d-flex text-danger align-items-center m-0 text-decoration-line-through">$
+								<span class="prev-price">72</span>
+							</h4>
+							<h4 class="fs-6 d-flex align-items-center m-0 ">$
+								<span class="curr-price">67</span>
+							</h4>
+						</div>
+					</div>
+				</div>
+				<div class="product-card position-relative overflow-hidden card-shadow py-2 bg-dark rounded-2 position-relative flex-column justify-center swiper-slide">
+					<ul class="action position-absolute">
+						<li class="justify-center add-to-cart position-relative mb-1 rounded-1">
+							<i class="fa-solid fa-shopping-cart  fs-10"></i>
+							<span class="position-absolute fs-12 position-relative zi-1 bg-danger text-light rounded-1 top-50 translate-middle-y">
+								Add To Cart
+								<span class="square"></span>
+							</span>
+						</li>
+						<li class="justify-center show-details position-relative rounded-1">
+							<i class="fa-solid fa-eye fs-10"></i>
+							<span class="position-absolute fs-12 position-relative zi-1 bg-danger text-light rounded-1 top-50 translate-middle-y">
+								See Details
+								<span class="square"></span>
+							</span>
+						</li>
+					</ul>
+					<div class="product-img w-100 h-150 p-2 justify-center overflow-hidden">
+						<img src="assets/keyboard/5.png" class="img-fluid w-70">
+					</div>
+					<div class="product-details w-100 pt-3 px-2">
+						<a href="#" class="text-decoration-none">
+							<p class="category m-0 text-secondary text-capitalize" data-category="keyboard">
+								keyboard
+							</p>
+						</a>
+						<a href="#" class="text-decoration-none">
+							<h4 class=" text-light show-details-link product-name m-0 fs-6 text-uppercase pt-1">
+								CORSAIR K55 RGB PRO-Dynamic RGB Backlighting Six Macro Keys.</h4>
+						</a>
+						<div class="stars text-danger fs-6 pt-1">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star-half"></i>
+							<span class="ratings-point ps-1">4.5</span>
+						</div>
+						<div class="d-flex gap-15 pt-2 align-items-center m-0 p-0">
+							<h4 class="fs-6 d-flex text-danger align-items-center m-0 text-decoration-line-through">$
+								<span class="prev-price">28</span>
+							</h4>
+							<h4 class="fs-6 d-flex align-items-center m-0 ">$
+								<span class="curr-price">24</span>
+							</h4>
+						</div>
+					</div>
+				</div>
+				<div class="product-card position-relative overflow-hidden card-shadow py-2 bg-dark rounded-2 position-relative flex-column justify-center swiper-slide">
+					<ul class="action position-absolute">
+						<li class="justify-center add-to-cart position-relative mb-1 rounded-1">
+							<i class="fa-solid fa-shopping-cart  fs-10"></i>
+							<span class="position-absolute fs-12 position-relative zi-1 bg-danger text-light rounded-1 top-50 translate-middle-y">
+								Add To Cart
+								<span class="square"></span>
+							</span>
+						</li>
+						<li class="justify-center show-details position-relative rounded-1">
+							<i class="fa-solid fa-eye fs-10"></i>
+							<span class="position-absolute fs-12 position-relative zi-1 bg-danger text-light rounded-1 top-50 translate-middle-y">
+								See Details
+								<span class="square"></span>
+							</span>
+						</li>
+					</ul>
+					<div class="product-img w-100 h-150 p-2 justify-center overflow-hidden">
+						<img src="assets/mouse/1.png" class="img-fluid w-60">
+					</div>
+					<div class="product-details w-100 pt-3 px-2">
+						<a href="#" class="text-decoration-none">
+							<p class="category m-0 text-secondary text-capitalize" data-category="mouse">
+								mouse
+							</p>
+						</a>
+						<a href="#" class="text-decoration-none">
+							<h4 class=" text-light show-details-link product-name m-0 fs-6 text-uppercase pt-1">
+								ASUS ROG Gladius II Gaming Mouse | Tuned 19,000 DPI Sensor.
+							</h4>
+						</a>
+						<div class="stars text-danger fs-6 pt-1">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star-half"></i>
+							<span class="ratings-point ps-1">2.5</span>
+						</div>
+						<div class="d-flex gap-15 pt-2 align-items-center m-0 p-0">
+							<h4 class="fs-6 d-flex text-danger align-items-center m-0 text-decoration-line-through">$
+								<span class="prev-price">32</span>
+							</h4>
+							<h4 class="fs-6 d-flex align-items-center m-0 ">$
+								<span class="curr-price">24</span>
+							</h4>
+						</div>
+					</div>
+				</div>
+				<div class="product-card position-relative overflow-hidden card-shadow py-2 bg-dark rounded-2 position-relative flex-column justify-center swiper-slide">
+					<ul class="action position-absolute">
+						<li class="justify-center add-to-cart position-relative mb-1 rounded-1">
+							<i class="fa-solid fa-shopping-cart  fs-10"></i>
+							<span class="position-absolute fs-12 position-relative zi-1 bg-danger text-light rounded-1 top-50 translate-middle-y">
+								Add To Cart
+								<span class="square"></span>
+							</span>
+						</li>
+						<li class="justify-center show-details position-relative rounded-1">
+							<i class="fa-solid fa-eye fs-10"></i>
+							<span class="position-absolute fs-12 position-relative zi-1 bg-danger text-light rounded-1 top-50 translate-middle-y">
+								See Details
+								<span class="square"></span>
+							</span>
+						</li>
+					</ul>
+					<div class="product-img w-100 h-150 p-2 justify-center overflow-hidden">
+						<img src="assets/psp/1.png" class="img-fluid w-50">
+					</div>
+					<div class="product-details w-100 pt-3 px-2">
+						<a href="#" class="text-decoration-none">
+							<p class="category m-0 text-secondary text-capitalize" data-category="ps5">
+								ps5
+							</p>
+						</a>
+						<a href="#" class="text-decoration-none">
+							<h4 class=" text-light show-details-link product-name m-0 fs-6 text-uppercase pt-1">
+								Sony PlayStation 5 Console, spidar-man edition.
+							</h4>
+						</a>
+						<div class="stars text-danger fs-6 pt-1">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<span class="ratings-point ps-1">4</span>
+						</div>
+						<div class="d-flex gap-15 pt-2 align-items-center m-0 p-0">
+							<h4 class="fs-6 d-flex text-danger align-items-center m-0 text-decoration-line-through">$
+								<span class="prev-price">580</span>
+							</h4>
+							<h4 class="fs-6 d-flex align-items-center m-0 ">$
+								<span class="curr-price">530</span>
+							</h4>
+						</div>
+					</div>
+				</div>
+				<div class="product-card position-relative overflow-hidden card-shadow py-2 bg-dark rounded-2 position-relative flex-column justify-center swiper-slide">
+					<ul class="action position-absolute">
+						<li class="justify-center add-to-cart position-relative mb-1 rounded-1">
+							<i class="fa-solid fa-shopping-cart  fs-10"></i>
+							<span class="position-absolute fs-12 position-relative zi-1 bg-danger text-light rounded-1 top-50 translate-middle-y">
+								Add To Cart
+								<span class="square"></span>
+							</span>
+						</li>
+						<li class="justify-center show-details position-relative rounded-1">
+							<i class="fa-solid fa-eye fs-10"></i>
+							<span class="position-absolute fs-12 position-relative zi-1 bg-danger text-light rounded-1 top-50 translate-middle-y">
+								See Details
+								<span class="square"></span>
+							</span>
+						</li>
+					</ul>
+					<div class="product-img w-100 h-150 p-2 justify-center overflow-hidden">
+						<img src="assets/gamepad/3.png" class="img-fluid w-60">
+					</div>
+					<div class="product-details w-100 pt-3 px-2">
+						<a href="#" class="text-decoration-none">
+							<p class="category m-0 text-secondary text-capitalize" data-category="gamepad">
+								gamepad
+							</p>
+						</a>
+						<a href="#" class="text-decoration-none">
+							<h4 class=" text-light show-details-link product-name m-0 fs-6 text-uppercase pt-1">
+								Razer Wolverine V2 Wired Gaming Controller for Xbox Series
+							</h4>
+						</a>
+						<div class="stars text-danger fs-6 pt-1">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star-half"></i>
+							<span class="ratings-point ps-1">2.5</span>
+						</div>
+						<div class="d-flex gap-15 pt-2 align-items-center m-0 p-0">
+							<h4 class="fs-6 d-flex text-danger align-items-center m-0 text-decoration-line-through">
+								<span class="prev-price"></span>
+							</h4>
+							<h4 class="fs-6 d-flex align-items-center m-0 ">$
+								<span class="curr-price">33</span>
+							</h4>
+						</div>
+					</div>
+				</div>
+				<div class="product-card position-relative overflow-hidden card-shadow py-2 bg-dark rounded-2 position-relative flex-column justify-center swiper-slide">
+					<ul class="action position-absolute">
+						<li class="justify-center add-to-cart position-relative mb-1 rounded-1">
+							<i class="fa-solid fa-shopping-cart  fs-10"></i>
+							<span class="position-absolute fs-12 position-relative zi-1 bg-danger text-light rounded-1 top-50 translate-middle-y">
+								Add To Cart
+								<span class="square"></span>
+							</span>
+						</li>
+						<li class="justify-center show-details position-relative rounded-1">
+							<i class="fa-solid fa-eye fs-10"></i>
+							<span class="position-absolute fs-12 position-relative zi-1 bg-danger text-light rounded-1 top-50 translate-middle-y">
+								See Details
+								<span class="square"></span>
+							</span>
+						</li>
+					</ul>
+					<div class="product-img w-100 h-150 p-2 justify-center overflow-hidden">
+						<img src="assets/gamepad/4.png" class="img-fluid w-60">
+					</div>
+					<div class="product-details w-100 pt-3 px-2">
+						<a href="#" class="text-decoration-none">
+							<p class="category m-0 text-secondary text-capitalize" data-category="gamepad">
+								gamepad
+							</p>
+						</a>
+						<a href="#" class="text-decoration-none">
+							<h4 class=" text-light show-details-link product-name m-0 fs-6 text-uppercase pt-1">
+								8BitDo Pro 2 for Switch PC, Android, Steam & Raspberry Pi
+							</h4>
+						</a>
+						<div class="stars text-danger fs-6 pt-1">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<span class="ratings-point ps-1">5</span>
+						</div>
+						<div class="d-flex gap-15 pt-2 align-items-center m-0 p-0">
+							<h4 class="fs-6 d-flex text-danger align-items-center m-0 text-decoration-line-through">$
+								<span class="prev-price">82</span>
+							</h4>
+							<h4 class="fs-6 d-flex align-items-center m-0 ">$
+								<span class="curr-price">63</span>
+							</h4>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+	<!--PRWVIEW PRODUCTS  -->
+	<div class="preview-image-container container opacity position-absolute position-fixed top-50 start-50 translate-middle px-3">
+		<div class="row shadow rounded-3 overflow-hidden">
+			<div class="col preview col-12 col-md-6 col-xl-6 bg-dark justify-center">
+				<div class="preview-img overflow-hidden d-flex align-items-center justify-content-center">
+					<img src="" class="img-fluid w-75 " />
+				</div>
+			</div>
+			<div class="col bg-light text-dark align-items-center col-12 col-md-6 col-xl-6">
+				<div class="preview-details py-2 text-dark">
+					<small class="mb-2 category fs-7 text-capitalize"></small>
+					<h4 class="product-title text-break fs-6"" text-uppercase text-dark"></h4>
+					<p class="fs-7 text-dark">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe placeat harum deserunt.
+					</p>
+					<select class="border rounded-1 fs-7 text-dark">
+						<option>Select Size</option>
+						<option>SM</option>
+						<option>LG</option>
+						<option>XL</option>
+						<option>XXL</option>
+					</select>
+					<div class="d-flex w-100 mt-2 mb-0 align-items-center justify-content-between ">
+						<span class="d-flex align-items-center">
+							<h3 class="text-decoration-line-through fs-6 pe-2 prev-price text-danger"></h3>
+							<h3 class="text-dark curr-price fs-6"></h3>
+						</span>
+						<!-- <span class="ratings">
+						</span> -->
+					</div>
+					<button class="btn btn-light me-3 my-0 border fs-10">Order Now</button>
+					<button class="btn btn-secondary fs-10">Add To Cart</button>
+				</div>
+			</div>
+			<span class="position-absolute ">
+				<i class="fa-solid fa-times close text-light pt-2"></i>
+			</span>
+		</div>
+	</div>
+	<!-- Product Banner 2-->
+	<section class="banner 2">
+		<div class="w-90 mx-auto py-4">
+			<div class="row text-white align-items-center">
+				<div class="col col-12 col-sm-6 col-md-6">
+					<div class="p-3 my-2 contents d-flex flex-wrap bg-primary justify-content-center rounded-3 w-100">
+						<div class="col d-flex justify-content-center col-12 col-sm-6 col-md-6">
+							<img src="assets/gCard/1.png" alt="" class="img-fluid w-75">
+						</div>
+						<div class="col col-12 col-sm-6 col-md-6">
+							<small>20% Off On</small>
+							<h1 class="text-light text-uppercase">weekend Special</h1>
+							<small>From 3 jan. To 13 jan.</small>
+						</div>
+					</div>
+				</div>
+				<div class="col col-12 col-sm-6 col-md-6">
+					<div class="p-3 my-2 contents d-flex flex-wrap bg-dark text-warning justify-content-center rounded-3">
+						<div class="col col-12 col-sm-6 col-md-6">
+							<small>25% Off</small>
+							<h1 class="text-uppercase text-liht">summer sale</h1>
+							<small>From 4 fed. To 19 feb.</small>
+						</div>
+						<div class="col d-flex justify-content-center col-12 col-sm-6 col-md-6">
+							<img src="assets/keyboard/3.png" alt="" class="img-fluid w-75">
+						</div>
+					</div>
+				</div>
+			</div>
+			<p class="mx-auto fs-7 py-1">©️Terms & Conditions will be applied.</p>
+		</div>
+	</section>
+	<!-- FOOTER -->
+	<footer class="px-5 w-100 bg-dark sticky-bottom">
+		<div class="row py-4">
+			<div class="col text-white p-0 col-6 col-sm-4 col-md-3 my-2">
+				<h5><a href="#" class="text-white text-decoration-none fs-4">Game<span>Shop</span></a></h5>
+				<p class="fs-7">Akhtaruzzaman Shopping Center<br>
+					agrabad,chittagong
+				</p>
+			</div>
+			<div class="col text-white p-0 col-6 col-sm-4 col-md-2 my-2">
+				<h6 class="text-uppercase">Quick links</h6>
+				<li class="fs-7">
+					<a class="text-white text-decoration-none" href="index.html">Homepage</a><br>
+				</li>
+				<li class="fs-7">
+					<a class="text-white text-decoration-none" href="shop.html">Shop</a>
+				</li>
+				<li class="fs-7">
+					<a class="text-white text-decoration-none" href="blog.html">Blogs</a>
+				</li>
+				<li class="fs-7">
+					<a class="text-white text-decoration-none" href="contact.html">Contacts</a>
+				</li>
+			</div>
+			<div class="col text-white p-0 col-6 col-sm-4 col-md-2 my-2">
+				<h6 class="text-uppercase">Categories</h6>
+				<li class="fs-7">
+					<a href="shop.html" class="text-white text-decoration-none">Mouse</a>
+				</li>
+				<li class="fs-7">
+					<a href="shop.html" class="text-white text-decoration-none">Keyboard</a>
+				</li>
+				<li class="fs-7">
+					<a href="shop.html" class="text-white text-decoration-none">Gamepad</a>
+				</li>
+				<li class="fs-7">
+					<a href="shop.html" class="text-white text-decoration-none">Headphone</a>
+				</li>
+				<li class="fs-7">
+					<a href="shop.html" class="text-white text-decoration-none">Graphics Card</a>
+				</li>
+			</div>
+			<div class="col text-white p-0 col-6 col-sm-4 col-md-2 my-2">
+				<h6 class="text-uppercase">Subscribe us</h6>
+				<p class="fs-7">Subscribe Our Youtube Channel</p>
+				<button class="btn btn-danger fs-7 rounded-pill">
+					<a href="https://www..com/" class="text-light text-decoration-none">Subscribe</a>
+				</button>
+			</div>
+			<div class="col text-white p-0 col-6 col-sm-4 col-md-3 my-2">
+				<h6 class="text-uppercase">install app</h6>
+				<small class="fs-12">Get Our App from</small>
+				<div class="d-flex flex-wrap">
+					<img src="assets/image/playstore.jpg" alt="" class="img-fluid w-48 me-1 border px-2 border-light rounded-3">
+					<img src="assets/image/appstore.jpg" alt="" class="img-fluid w-48 border px-2 border-light rounded-3">
+					<small class="fs-12 py-1">Secured Payments Gateways</small>
+					<img src="assets/image/payments.png" alt="" class="img-fluid w-100 px-2 border-light rounded-3">
+				</div>
+			</div>
+		</div>
+		<div class="text-center justify-center flex-column">
+			<ul class="d-flex align-items-center my-0 ps-0">
+				<li class="mx-2"><a href="#" class="text-light fs-12"><i class="fa-solid fa-brands fa-facebook"></i></a></li>
+				<li class="mx-2"><a href="#" class="text-light fs-12"><i class="fa-solid fa-brands fa-facebook-messenger"></i></a></li>
+				<li class="mx-2"><a href="#" class="text-light fs-12"><i class="fa-solid fa-brands fa-instagram"></i></a></li>
+				<li class="mx-2"><a href="#" class="text-light fs-12"><i class="fa-solid fa-brands fa-linkedin"></i></a></li>
+				<li class="mx-2"><a href="#" class="text-light fs-12"><i class="fa-solid fa-brands fa-twitter"></i></a></li>
+			</ul>
+			<a href="#" class="text-light  fs-12 text-capitalize text-decoration-none">created by MD. EMAM <i class="fa-solid fa-copyright pb-1"></i> dec. 2020</a>
+		</div>
+	</footer>
+
+
+
+
+
+	<!-- DARK BACKGROUND -->
+	<div class="overlayer opacity position-absolute position-fixed top-0 start-0 bg-light-dark w-100 h-100"></div>
+
+	<!-- Bootstrap CDN -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+	</script>
+	<!-- Link Javascript -->
+	<script src="js/script.js"></script>
+	<!-- Swiper JS CDN-->
+	<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+	<script src="js/slider.js"></script>
+
+	<script>
+		//SHOP PRODUCTS CATEGORY
+		const selectCatg = body.querySelector('.select');
+		const prodCard = body.querySelectorAll('.shop-main .card');
+		let catgAll = selectCatg.querySelector('.shop-main .main');
+		catgAll.addEventListener('click', () => {
+			let categoryList = selectCatg.querySelector('.lists');
+			let downicon = selectCatg.querySelector('i');
+			categoryList.classList.toggle('show');
+			downicon.classList.toggle('rotate');
+			let selectedCatg = categoryList.querySelectorAll('li');
+			selectedCatg.forEach((e) => {
+				e.addEventListener('click', () => {
+					catgAll.textContent = e.textContent;
+					categoryList.classList.remove('show');
+					downicon.classList.remove('rotate');
+				})
+			});
+			categoryList.addEventListener('click', (btn) => {
+				let currCategory = btn.target.getAttribute('data-filter');
+				prodCard.forEach((card) => {
+					let currCategoryItems = card.getAttribute('data-items');
+					if ((currCategoryItems == currCategory) || (currCategory == 'all')) {
+						card.classList.remove("d-none");
+						card.classList.remove("hide");
+						card.classList.add("show");
+					} else {
+						card.classList.add("hide");
+						card.classList.remove("show");
+					}
+				})
+			});
+		});
+	</script>
+</body>
+
+</html>
