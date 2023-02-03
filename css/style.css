@@ -1,0 +1,796 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Raleway:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+	scroll-behavior: smooth;
+	/* border: 1px solid #A9ACCC; */
+}
+
+
+.blog h2 {
+	font-family: "Raleway"
+}
+i{
+	cursor: pointer;
+}
+footer li a:hover{
+	color: #D6D8EE !important;
+}
+.preloader {
+	height: 100vh;
+	width: 100%;
+	background: #000;
+	overflow: hidden;
+	z-index: 10100000;
+	
+}
+
+.px-5 {
+	padding: 0 5% !important;
+}
+
+.product-card a h4 {
+	color: rgba(107, 108, 125, 1);
+}
+
+.gap-10 {
+	row-gap: 10;
+}
+
+.w-45 {
+	width: 45%;
+}
+
+.dark a h4 {
+	color: rgba(214, 216, 235, 1);
+}
+
+footer h6 {
+	font-size: 17px;
+	font-weight: 600;
+	font-family: "Raleway";
+}
+
+footer .w-48 {
+	width: 48% !important;
+}
+
+@media(max-width: 700px) {
+	footer .fs-7 {
+		font-size: 12px;
+	}
+
+}
+
+.navbar-toggler:focus {
+	box-shadow: 0 0 0 0;
+}
+
+.navbar-toggler-icon {
+	width: 1.2em;
+	height: 1.2em;
+}
+
+.homepage .bg-danger,
+.contact .bg-danger {
+	background-color: #FB0A0A !important;
+}
+
+.category .text-danger {
+	color: #C5A615 !important;
+}
+
+.dark .text-danger {
+	color: rgba(0, 255, 25, 1) !important
+}
+
+img {
+	transition: all .2s ease-in-out;
+}
+
+.category img:hover,
+.banner img:hover,
+.blogs-area img:hover {
+	transform: scale(1.1);
+}
+
+li {
+	cursor: pointer;
+}
+
+.opacity {
+	opacity: 0;
+	pointer-events: none;
+	overflow: hidden;
+}
+
+.justify-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.py-4 {
+	padding: 40px 0;
+}
+
+select {
+	padding: 2px;
+}
+
+input,
+select,
+option {
+	border: 0;
+	outline: none;
+}
+
+.w-30 {
+	width: 30%
+}
+
+.w-40 {
+	width: 40%;
+}
+
+.w-55 {
+	width: 55%
+}
+
+.w-60 {
+	width: 60%
+}
+
+.w-70 {
+	width: 70%;
+}
+
+.w-90 {
+	width: 90%;
+}
+
+.w-250 {
+	width: 250px;
+}
+
+.mh-40 {
+	max-height: 30%;
+}
+
+@media(max-width: 500px) {
+	.fs-7 {
+		font-size: 10px;
+	}
+
+	.fs-9 {
+		font-size: 9px;
+	}
+
+	.fs-10 {
+		font-size: 10px;
+	}
+
+	.fs-12 {
+		font-size: 12px;
+	}
+
+	.w-30 {
+		width: 45%
+	}
+
+	.w-40 {
+		width: 100%;
+	}
+
+}
+
+.end-15 {
+	right: 15%;
+}
+
+.rotate-15 {
+	transform: rotate(-15deg);
+}
+
+.rotate-45 {
+	transform: rotate(-45deg);
+}
+
+.zi-1 {
+	z-index: 1;
+}
+
+.rounded-4 {
+	border-radius: 7px;
+}
+
+.h-200 {
+	height: 200px;
+}
+
+.h-150 {
+	height: 150px;
+}
+
+.big-font {
+	font-size: 100px;
+	font-weight: 800;
+	z-index: -1;
+	color: rgba(220, 216, 229, .3);
+	font-family: "Raleway";
+	-webkit-text-fill-color: transparent;
+	-webkit-text-stroke-width: 2px;
+	transition: .2s;
+}
+.big-font:hover{
+	-webkit-text-fill-color: rgba(220, 216, 229, .3);;
+	
+}
+
+.mid-font {
+	font-size: 35px;
+	font-weight: 600;
+	font-family: "Raleway";
+}
+
+.start-10 {
+	left: 10%;
+}
+
+
+nav i {
+	color: #FFFFFF;
+}
+
+.end-110 {
+	right: 110%;
+}
+
+.c-pointer {
+	cursor: pointer;
+}
+
+body {
+	width: 100%;
+	overflow-x: hidden;
+}
+
+a:visited {
+	text-decoration: underline !important;
+}
+
+.cart-container {
+	width: 40%;
+	height: 100vh;
+	position: absolute;
+	z-index: 99999;
+	top: 0;
+	right: -40%;
+	position: fixed;
+	overflow: hidden;
+	overflow-y: scroll;
+	transition: .3s;
+}
+
+.cart-container.show-cart {
+	right: 0%;
+}
+
+@media(max-width: 500px) {
+	.end-110 {
+		left: 18%;
+	}
+
+	.cart-container.show-cart {
+		width: 100%;
+	}
+}
+
+.link-hover:hover {
+	color: #CF2020;
+}
+
+.card-shadow {
+	box-shadow: 2px 3px 15px rgba(0, 0, 0, .04),
+		-1px -2px 15px rgba(0, 0, 0, .04);
+	border-top: 1px solid #EBEBF4;
+}
+
+.hover-shadow:hover {
+	box-shadow: 1px 1px 10px rgba(0, 0, 0, .05),
+		-1px -1px 10px rgba(0, 0, 0, .05);
+}
+
+.move:hover {
+	animation: move 3s linear infinite;
+}
+
+@keyframes move {
+	0% {
+		transform: translateY(-5px);
+	}
+
+	50% {
+		transform: translateY(5px);
+	}
+
+	100% {
+		transform: translateY(-5px);
+	}
+}
+
+
+/* NAVBAR */
+.search-box {
+	width: 0;
+	transition: .3s ease-in;
+}
+
+.search-box.visible {
+	width: 180px;
+	opacity: 1;
+	pointer-events: auto;
+}
+
+
+/* HOMEPAGE SLIDER */
+.homepage {
+	height: 100vh;
+}
+
+p {
+	width: fit-content;
+}
+
+.off {
+	width: 50px;
+	height: 50px;
+	/* top: 0; */
+}
+
+@media(max-width: 600px) {
+	.off {
+		width: 40px;
+		height: 40px;
+	}
+}
+
+.swiper .swiper-pagination-bullet {
+	background: #000000;
+}
+
+/* CATEGORY */
+.grid {
+	display: grid;
+	/* place-items: center; */
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.col-span-2 {
+	grid-column: span 2;
+}
+
+.row-span-2 {
+	grid-row: span 2;
+}
+
+@media(max-width: 500px) {
+	.grid {
+		grid-template-columns: repeat(1, 1fr);
+		/* row-gap: 10px; */
+	}
+
+	.col-span-2 {
+		grid-column: span 1;
+	}
+
+	.row-span-3 {
+		grid-row: span 1;
+	}
+}
+
+/*SHOP PRODUCTS  */
+.product-slider .product-card {
+	width: 24%;
+}
+
+.product-slider .swiper {
+	overflow: hidden;
+}
+
+.gap-15 {
+	column-gap: 15px;
+}
+
+.product-card .fs-10 {
+	font-size: 14px;
+}
+
+.product-card .fs-12 {
+	font-size: 12px;
+}
+
+.product-card img {
+	transition: .2s ease-in-out;
+}
+
+.product-card:hover img {
+	transform: scale(1.06);
+	transform-origin: right;
+}
+
+.product-name {
+	word-break: break-all;
+}
+
+.product-card .action {
+	top: 4%;
+	right: -100%;
+	transition: .3s ease-in-out;
+}
+
+.product-card:hover .action {
+	right: 5%;
+}
+
+.action li {
+	width: 32px;
+	height: 32px;
+	background: #DFE1F5;
+}
+
+.action li:hover {
+	background: rgb(220, 53, 69);
+	color: #F6F0F0;
+}
+
+.action li span {
+	white-space: nowrap;
+	right: 145%;
+	width: 0;
+	overflow: hidden;
+}
+
+.action li .square {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	top: 38%;
+	right: -2px;
+	background: rgb(220, 53, 69);
+	transform: translateY(-48%);
+	rotate: 45deg;
+	border-radius: 3px 0 3px 4px;
+	z-index: -1;
+}
+
+.action li:hover span {
+	padding: 5px 10px;
+	width: fit-content;
+	overflow: visible;
+}
+
+
+
+@media(max-width: 500px) {
+	.product-card {
+		width: 100%;
+		margin: auto;
+	}
+
+	.preview-container .w-90 {
+		width: 80%;
+	}
+}
+
+
+/* IMAGE PREVIEW */
+.preview-container {
+	z-index: 3;
+}
+
+.preview-image-container {
+	z-index: 5;
+}
+
+.overlayer {
+	z-index: 3;
+	background: rgba(0, 0, 0, .3);
+	transition: .2s;
+}
+
+.suggested-products h4:nth-child(2) {
+	color: #fff !important;
+}
+
+
+@media(max-width: 500px) {
+
+	.suggested-products .product-card,
+	.product-slider .product-card {
+		width: 80%;
+	}
+}
+
+/* Main Shop */
+.shop-main .text-light {
+	color: #000 !important;
+
+}
+
+.shop-main .action span {
+	color: #fff !important;
+}
+
+.shop-main .hover span:hover {
+	background: #000;
+	color: #fff;
+}
+
+.shop-main .row li:hover i {
+	color: #fff;
+}
+
+.view-more:before {
+	position: absolute;
+	content: "";
+	top: 50%;
+	right: 4px;
+	transform: translateY(-50%);
+	width: 7px;
+	height: 1px;
+	background: #F82828
+}
+
+.fs-14 {
+	font-size: 13px;
+}
+
+.product-card:hover i {
+	color: unset !important
+}
+
+.shop-main li:hover .categories {
+	color: #000 !important
+}
+
+
+.select .box {
+	padding: 4px 8px;
+	/* border: 1px solid black; */
+	border-radius: 2px;
+	font-weight: 500;
+}
+
+.lists {
+	width: 150px;
+	z-index: 2;
+	height: 0;
+	padding: 0;
+	overflow: hidden;
+	font-weight: 500;
+	transition: .3s ease-in-out;
+}
+
+.lists li {
+	/* width: 100%; */
+	padding: 5px 0;
+	border-right: 2px solid transparent;
+	padding-right: 10px;
+}
+
+.lists li:hover {
+	border-right: 2px solid #EA0A0A;
+	color: #EA0A0A;
+}
+
+.select i {
+	font-size: 13px;
+	transition: .3s ease-in-out;
+}
+
+.select i.rotate {
+	transform: rotate(-180deg);
+	margin-left: 2px;
+}
+
+.lists.show {
+	height: 680%;
+	padding: 5px 0;
+}
+
+.heading {
+	font-size: 25px;
+	font-weight: 600;
+	letter-spacing: 1px;
+	font-family: "Raleway";
+}
+
+@media(max-width: 700px) {
+	.select .box {
+		padding: 1px 7px;
+	}
+
+	.lists {
+		width: 110px;
+		height: 0;
+	}
+
+	.lists li {
+		padding: 4px 0;
+	}
+
+	.select i {
+		font-size: 10px;
+	}
+
+	.lists.show {
+		height: 865%;
+	}
+
+	.heading {
+		font-size: 18px;
+		/* font-family: "Raleway"; */
+		/* font-weight: 600; */
+		/* letter-spacing: 1px; */
+	}
+}
+
+.shop-main .card {
+	border: 0 !important;
+}
+
+
+@media(max-width: 500px) {
+	.big-font {
+		font-size: 45px;
+	}
+
+	.shop-main .action li {
+		z-index: 1;
+		width: 25px;
+		height: 25px;
+	}
+
+	.shop-main .action i {
+		font-size: 12px;
+	}
+
+	.shop-main .action span {
+		font-size: 9px;
+	}
+
+	.shop-main .action .square {
+		width: 15px;
+		height: 15px;
+		top: 35%;
+		border-radius: 5px 0 5px 0;
+	}
+
+	.shop-main .h-150 {
+		height: 100px;
+	}
+
+	.shop-main .w-60 {
+		width: 80%;
+	}
+
+	.shop-main .fs-6 {
+		font-size: 10px !important;
+	}
+
+	.shop-main .pt-3 {
+		padding-top: 0px !important;
+	}
+
+	.shop-main .pt-2 {
+		padding-top: 0px !important;
+	}
+
+	.shop-main .ratings-point {
+		color: #000 !important;
+	}
+}
+
+.card.hide {
+	display: none;
+}
+
+.card.show {
+	animation: animate 0.4s ease;
+}
+
+@keyframes animate {
+	0% {
+		transform: scale(0.5);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+
+/* BLOG PAGE */
+.h-300 {
+	height: 300px;
+}
+
+.hover-scale i {
+	transition: .3s;
+}
+
+.hover-scale:hover i {
+	transform: translateY(-7px);
+}
+
+.get-details-box {
+	width: 40%;
+	left: -100%;
+	height: 300px;
+	transition: .3s;
+	overflow: hidden;
+	z-index: 5;
+}
+
+.get-details-box.show {
+	left: 0;
+}
+
+.contact button {
+	outline: 0;
+	border: 0;
+	background: transparent;
+}
+
+.contact .button:hover {
+	background: #000;
+	color: #fff;
+}
+
+.contact .button:hover button {
+	color: #fff !important;
+
+}
+
+@media(max-width: 700px) {
+	.get-details-box {
+		width: 100%;
+	}
+}
+
+.newsletter button {
+	/* width: 20%; */
+	border: 0;
+	outline: 0;
+	white-space: nowrap;
+	background: #000;
+	color: #fff;
+	font-weight: 500;
+	transition: .2s;
+}
+
+.newsletter input::placeholder,
+.contact input::placeholder {
+	color: #000;
+}
+
+.newsletter button:hover {
+	background: transparent;
+	border: 0;
+	border-left: 1px solid #000;
+	color: #000;
+}
+
+.show-pass{
+	display: none;
+}
+.password-field input:valid ~ .show-pass{
+	display: block;
+}
